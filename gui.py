@@ -30,7 +30,7 @@ startMenuLabel = tk.Label(mainMenu, text="Wifi Password Rememberer", font=("Bahn
 startMenuButton = tk.Button(mainMenu, text="Start", font=("Bahnschrift", 20), bg="#909090", fg="#000000", command=lambda: mainToEntryScreen())
 enterLabel = tk.Label(entryMenu, text="Enter your wifi name \n(case doesn't matter):", font=("Bahnschrift", 20), bg="#999999", fg="#000000")
 preResultLabel = tk.Label(resultMenu, text=f"Your password is: \n(copied to clipboard)", font=("Bahnschrift", 20), bg="#999999", fg="#000000")
-enterEntry = tk.Entry(entryMenu, font=("Bahnschrift", 20), bg="#909090", fg="#000000")
+enterEntry = tk.Entry(entryMenu, font=("Bahnschrift", 20), bg="#909090", fg="#00ffff")
 resultLabel = tk.Label(resultMenu, text="invalid", font=("Bahnschrift", 20), bg="#909090", fg="#00ffff")
 enterButton = tk.Button(entryMenu, text="Enter", font=("Bahnschrift", 20), bg="#909090", fg="#000000", command=lambda: [pyperclip.copy(getPassword(enterEntry.get())), resultLabel.config(text=getPassword(enterEntry.get())), resultMenu.pack(), entryMenu.destroy()])
 resultButton = tk.Button(resultMenu, text="Quit", font=("Bahnschrift", 20), bg="#909090", fg="#000000", command=lambda: screen.destroy())
